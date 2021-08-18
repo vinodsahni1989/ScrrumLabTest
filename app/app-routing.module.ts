@@ -19,6 +19,10 @@ const routes: Routes = [
     path: 'published-article',
     loadChildren: () => import('./AllPages/published-article/published-article.module').then( m => m.PublishedArticlePageModule)
   },
+  {
+    path: 'my-modal',
+    loadChildren: () => import('./AllPages/my-modal/my-modal.module').then( m => m.MyModalPageModule)
+  },
 ];
 
 @NgModule({
