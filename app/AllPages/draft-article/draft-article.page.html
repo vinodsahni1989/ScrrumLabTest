@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar color="success">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Draft Article</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-searchbar showCancelButton="focus" type="text" debounce="500" (ionChange)="searchArticle($event)"></ion-searchbar>
+
+<ion-content>
+
+  <ion-grid>
+    <ion-item *ngFor="let item of userArray">
+      <ion-col size="2">
+        {{item.id}}
+      </ion-col>
+      <ion-col size="8">
+        {{item.title}}
+      </ion-col>
+      <ion-col size="2">
+        <ion-icon name="create-outline" (click)="editArticle(item.title)"></ion-icon>
+      </ion-col>
+
+    </ion-item>
+
+  </ion-grid>
+
+</ion-content>
+
+<ion-footer>
+  <ion-button class="page2-btn" (click)="gotoPage3()">Go to pge 3</ion-button>
+</ion-footer>

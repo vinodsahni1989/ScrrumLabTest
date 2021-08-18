@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar color="success">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Published Article</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-searchbar showCancelButton="focus" type="text" debounce="500" (ionChange)="searchArticle($event)"></ion-searchbar>
+
+<ion-content>
+  <ion-grid>
+    <ion-item *ngFor="let item of publishedArticle">
+      <ion-col size="2">
+        {{item.id}}
+      </ion-col>
+      <ion-col size="10">
+        {{item.title}}
+      </ion-col>
+   
+    </ion-item>
+
+  </ion-grid>
+
+
+</ion-content>
